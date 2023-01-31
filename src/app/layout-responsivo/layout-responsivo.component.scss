@@ -1,0 +1,112 @@
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.container::after,
+.container::before {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.grid-1,
+.grid-2,
+.grid-3,
+.grid-4,
+.grid-5,
+.grid-6,
+.grid-7,
+.grid-8,
+.grid-9,
+.grid-10,
+.grid-11,
+.grid-12 {
+  float: left;
+  display: block;
+  min-height: 1px;
+}
+
+.grid-1 {
+  width: 8.333%;
+}
+
+.grid-2 {
+  width: 16.666%;
+}
+
+.grid-3 {
+  width: 25%;
+}
+
+.grid-4 {
+  width: 33.333%;
+}
+
+.grid-5 {
+  width: 41.666%;
+}
+
+.grid-6 {
+  width: 50%;
+}
+
+.grid-7 {
+  width: 58.333%;
+}
+
+.grid-8 {
+  width: 66.666%;
+}
+
+.grid-9 {
+  width: 75%;
+}
+
+.grid-10 {
+  width: 83.333%;
+}
+
+.grid-11 {
+  width: 91.666%;
+}
+
+.grid-12 {
+  width: 100%;
+}
+
+.filho-1,
+.filho-2,
+.filho-3,
+.filho-4,
+.filho-5,
+.filho-6,
+.filho-7,
+.filho-8,
+.filho-9 {
+  border: 1px solid;
+  margin: 10px;
+  background-color: red;
+}
+
+@media (max-width: 720px) {
+
+  .filho-1,
+  .filho-2,
+  .filho-3,
+  .filho-4,
+  .filho-5,
+  .filho-6,
+  .filho-7,
+  .filho-8,
+  .filho-9 {
+    border: 1px solid;
+    margin: 10px;
+    background-color: blue;
+  }
+
+
+  .grid-3 {
+    width: 96%;
+  }
+}

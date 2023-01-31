@@ -1,0 +1,8 @@
+<hr>
+<span>Component Pai</span>
+<hr>
+<div *ngFor="let nome of nomes">{{nome}}</div>
+<hr>
+
+<br><br>
+<app-filho (listaNomes)="listaNomes($event)"></app-filho>

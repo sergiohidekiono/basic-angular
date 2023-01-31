@@ -1,0 +1,51 @@
+<div class="container main-container col-md-3">
+  <h4>Demo Cadastro</h4>
+  <hr>
+  <form [formGroup]="formRegister" (ngSubmit)="submitForm()">
+    <div class="form-horizontal">
+      <div class="form-group">
+        <label for="name" class="col-md-10 control-label">Nome</label>
+        <div class="col-md-10">
+          <input type="text" class="form-control" formControlName="name" placeholder="Nome"
+            [ngClass]="{'is-invalid': formRegister.get('name')?.errors && (formRegister.get('name')?.dirty || formRegister.get('name')?.touched)}">
+          <span class="text-danger"
+            *ngIf="formRegister.get('name')?.errors && (formRegister.get('name')?.dirty || formRegister.get('name')?.touched)">
+            <p>Informe o Nome</p>
+          </span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="name" class="col-md-10 control-label">E-mail</label>
+        <div class="col-md-10">
+          <input type="text" class="form-control" formControlName="email" placeholder="E-mail"
+            [ngClass]="{'is-invalid': formRegister.get('email')?.errors && (formRegister.get('email')?.dirty || formRegister.get('email')?.touched)}">
+          <span class="text-danger"
+            *ngIf="formRegister.get('email')?.hasError('required') && (formRegister.get('email')?.dirty || formRegister.get('email')?.touched)">
+            <p>Informe o E-mail</p>
+          </span>
+          <span class="text-danger"
+            *ngIf="formRegister.get('email')?.hasError('email') && (formRegister.get('email')?.dirty || formRegister.get('email')?.touched)">
+            <p>E-mail está no formato inválido</p>
+          </span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="name" class="col-md-10 control-label">Senha</label>
+        <div class="col-md-10">
+          <input type="text" class="form-control" formControlName="password" placeholder="Senha">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="name" class="col-md-10 control-label">Confirmar Senha</label>
+        <div class="col-md-10">
+          <input type="text" class="form-control" formControlName="confirmPassword" placeholder="Confirmação de Senha">
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-md-4  mt-4">
+          <button class="btn btn-success" [disabled]="this.formRegister.invalid" type="submit">Cadastrar</button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

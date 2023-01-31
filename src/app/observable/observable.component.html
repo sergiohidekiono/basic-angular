@@ -1,0 +1,10 @@
+<div class="d-flex justify-content-center">
+  <form [formGroup]="formGroup" (ngSubmit)="onSubmit('promise')">
+    <input type="text" formControlName="name" placeholder="Sergio">
+    <button class="button" type="submit">Promise</button>
+  </form> &nbsp;&nbsp;
+  <form [formGroup]="formGroup" (ngSubmit)="onSubmit('observable')">
+    <input type="text" formControlName="name" placeholder="Sergio">
+    <button class="button" type="submit">Observable</button>
+  </form>
+</div>
